@@ -32,7 +32,7 @@ jobs:
 
   coverage:
     name: Coverage
-    needs: tests
+    needs: test
     runs-on: ubuntu-20.04
     steps:
       - name: "Check out the repo"
