@@ -63,7 +63,7 @@ jobs:
           echo "Finished combine"
           ls -la
           echo "Starting report"
-          #python -m coverage report -m
+          python -m coverage report -m --data-file=.coverage
           echo "Finished report"
           echo "Starting json"
           python -m coverage json
