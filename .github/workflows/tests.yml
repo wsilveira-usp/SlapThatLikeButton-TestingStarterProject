@@ -61,6 +61,7 @@ jobs:
           echo "Starting combine"
           python -m coverage combine
           echo "Finished combine"
+          ls -la
           echo "Starting report"
           python -m coverage report -m -i
           echo "Finished report"
