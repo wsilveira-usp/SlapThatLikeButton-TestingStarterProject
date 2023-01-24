@@ -59,7 +59,7 @@ jobs:
       - name: "Combine"
         run: |
           echo "Starting combine"
-          python -m coverage combine
+          python -m coverage combine 
           echo "Finished combine"
           ls -la
           echo "Starting report"
