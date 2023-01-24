@@ -62,7 +62,7 @@ jobs:
           python -m coverage combine
           echo "Finished combine"
           echo "Starting report"
-          python -m coverage report -m
+          python -m coverage report -m --debug
           echo "Finished report"
           echo "Starting json"
           python -m coverage json
