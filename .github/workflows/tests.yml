@@ -58,9 +58,15 @@ jobs:
 
       - name: "Combine"
         run: |
+          echo "Starting combine"
           python -m coverage combine
+          echo "Finished combine"
+          echo "Starting report"
           python -m coverage report -m --skip-covered
+          echo "Finished report"
+          echo "Starting json"
           python -m coverage json
+          echo "Finished json"
           export TOTAL=$(python -c "import json;print(json.load(open('coverage.json'))['totals']['percent_covered_display'])")
           echo "total=$TOTAL" >> $GITHUB_ENV
           echo "### Total coverage: ${TOTAL}%" >> $GITHUB_STEP_SUMMARY
